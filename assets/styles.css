@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+
+:root {
+	--primary-color: #070707;
+	/* --secondary-color:#0E0E0E; */
+	--secondary-color: #353535;
+	--money-color: #6dd401;
+	--text-color: #cbcbcb;
+	--btn-color: #30a1b3;
+}
+* {
+	font-family: "Nunito", sans-serif;
+	text-decoration: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--primary-color);
+	height: 100vh;
+	width: 100%;
+	color: var(--text-color);
+}
+header {
+	background-color: var(--secondary-color);
+}
+main {
+	background: linear-gradient(
+		90deg,
+		var(--secondary-color),
+		var(--primary-color)
+	);
+}
+.form-check .form-check-input[type="radio"] {
+	color: var(--btn-color);
+	height: 20px;
+	width: 20px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+}
+
+.front {
+	background-color: var(--secondary-color);
+	padding: 2rem;
+}
+.back {
+	display: none;
+}
+.total-tax {
+	color: var(--money-color);
+	font-size: 4rem;
+	font-weight: bold;
+}
+.money {
+	color: var(--money-color);
+}
+.moneytext {
+	font-size: 1.4rem;
+}
+.left {
+	padding: 2rem 4rem;
+}
+.formItems {
+	padding-bottom: 1.5rem;
+}
+.heading {
+	font-size: 26px;
+	text-align: center;
+	position: relative;
+}
+.heading::after {
+	content: "";
+	width: 150px;
+	position: absolute;
+	margin: 0 auto;
+	height: 4px;
+	border-radius: 1px;
+	background: var(--btn-color);
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.input-group .form-control[type="text"] {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	background-color: var(--primary-color);
+	outline: none;
+	border: none;
+	color: var(--text-color);
+}
+.input-group .form-control[type="text"]:focus {
+	border-color: var(--btn-color);
+}
+
+.input-group-text {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	color: white;
+	background-color: var(--primary-color);
+	border: none;
+}
+
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox 
+input[type="number"] {
+	-moz-appearance: textfield;
+} */
